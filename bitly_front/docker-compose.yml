@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  bitly_vue:
+    container_name: bitly_vue
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+    ports:
+      - '8081:8080'
