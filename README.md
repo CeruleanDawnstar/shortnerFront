@@ -1,5 +1,5 @@
 # :link:shortnerFront:link:
-Web app front-end using VueJS for the shortner application
+Web app front-end using VueJS for the link shortner application
 
 # :white_check_mark:Prerequisites:white_check_mark:
 
