@@ -4,9 +4,9 @@ import { createWebHistory, createRouter } from "vue-router";
 const routes =  [
   {
     path: "/",
-    alias: "/links",
-    name: "links",
-    component: () => import("../components/ListAllUrl")
+    alias: "/add",
+    name: "add",
+    component: () => import("../components/CreateShortLink")
   },
   {
     path: "/link/:id",
@@ -14,9 +14,9 @@ const routes =  [
     component: () => import("../components/EdiitUrlLink")
   },
   {
-    path: "/add",
-    name: "add",
-    component: () => import("../components/CreateShortLink")
+    path: "/links",
+    name: "links",
+    component: () => import("../components/ListAllUrl")
   }
 ];
 
