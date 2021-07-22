@@ -24,7 +24,7 @@ And restart the server back up :
 
 > `docker-compose up --build`
 
-To test out the project, you can use applications like [Postman].(https://www.postman.com/)
+To test out the project, you can use applications like [Postman](https://www.postman.com/).
 
 
 # :busts_in_silhouette:Contributors:busts_in_silhouette:
