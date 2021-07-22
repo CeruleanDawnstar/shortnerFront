@@ -1,6 +1,6 @@
 <template>
   <div class="form-group">
-   
+    <!--<div v-if="!submitted">-->
       <div class="form-group">
         <label for="longLink">please enter your URL</label>
         <input
@@ -14,13 +14,20 @@
       </div>
 
       <button @click="saveUrl" class="btn btn-success">Submit</button>
+      <br>
+      <br>
+    <div>
+        <p>short URL : {{shortLink}}</p>
+        <p>{{dateLink}}</p>
+    </div>
     </div>
 
     <!--<div v-else>
       <h4>You submitted successfully!</h4>
       <button class="btn btn-success" @click="newUrl">Add</button>
     </div>-->
- 
+ <!-- </div>--> 
+
 </template>
 
 <script>
@@ -32,10 +39,12 @@ export default {
     return {
       link: {
         id: null,
-        longUrl: "",
+        longLink: "",
         published: false
       },
-      submitted: false
+      submitted: false,
+      shortLink: "",
+      dateLink: ""
     };
   },
   methods: {
@@ -46,8 +55,10 @@ export default {
 
       urlService.create(data)
         .then(response => {
-          this.link.id = response.data.id;
           console.log(response.data);
+          this.link.longLink = response.data.longLink;
+          this.shortLink = response.data.shortLink;
+          this.dateLink = response.data.dateLink;
           this.submitted = true;
         })
         .catch(e => {

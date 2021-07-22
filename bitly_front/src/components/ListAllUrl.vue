@@ -1,19 +1,7 @@
 <template>
-  <div class="list row">
-    <div class="col-md-8">
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="please enter your URL"
-          v-model="title"/>
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button"
-            @click="shortner"
-          >
-            submit
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
+  <div class="row">
+
+    <div class="col-xl-8">
       <h4>url List</h4>
       <ul class="list-group">
         <li class="list-group-item"
@@ -22,23 +10,23 @@
           :key="index"
           @click="setActiveLink(link, index)"
         >
-          {{ link.title }}
+          {{ link.longLink }}
         </li>
       </ul>
             
     </div>
-    <div class="col-md-6">
+    <div class="col-xl-4">
       <div v-if="currentLink">
         <h4>Links</h4>
         <div>
           <label><strong>longLink:</strong></label> {{ currentLink.longLink }}
         </div>
         <div>
-          <label><strong>ShortLink:</strong></label> {{ currentLink.shortLink }}
+          <label><strong>ShortLink:</strong></label><a href= ""> {{ currentLink.shortLink }} </a>
         </div>
 
         <a class="badge badge-warning"
-          :href="'/link/' + currentLink.id"
+          :href="'/link/' + currentLink.idLink"
         >
           Edit
         </a>
@@ -68,7 +56,7 @@ export default {
     retrieveLink() {
       urlService.getAll()
         .then(response => {
-          this.link = response.data;
+          this.links = response.data;
           console.log(response.data);
         })
         .catch(e => {
