@@ -17,7 +17,7 @@
       <br>
       <br>
     <div>
-        <p>short URL : {{shortLink}}</p>
+        <p>short URL :<a href="shortUrl"> {{shortLink}}</a></p>
         <p>{{dateLink}}</p>
     </div>
     </div>
