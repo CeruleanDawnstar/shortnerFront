@@ -1,6 +1,5 @@
 import { createWebHistory, createRouter } from "vue-router";
 
-
 const routes =  [
   {
     path: "/",
@@ -17,6 +16,21 @@ const routes =  [
     path: "/links",
     name: "links",
     component: () => import("../components/ListAllUrl")
+  },
+  {
+    path: "/signUp",
+    name: "signUp",
+    component: () => import("../views/SignUp")
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("../views/Login")
+  },
+  {
+    path: "/profil",
+    name: "profil",
+    component: () => import("../views/Profil")
   }
 ];
 
@@ -26,4 +40,3 @@ const router = createRouter({
 });
 
 export default router;
-
