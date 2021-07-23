@@ -1,6 +1,5 @@
 <template>
   <div class="row">
-
     <div class="col-xl-8">
       <h4>url List</h4>
       <ul class="list-group">
@@ -13,7 +12,6 @@
           {{ link.longLink }}
         </li>
       </ul>
-            
     </div>
     <div class="col-xl-4">
       <div v-if="currentLink">
@@ -50,7 +48,6 @@ export default {
       currentLink: null,
       currentIndex: -1,
       longLink: "",
-      
     };
   },
   methods: {

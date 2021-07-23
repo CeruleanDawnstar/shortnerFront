@@ -1,8 +1,9 @@
 import http from "../http-common";
+import httpAuth from "../http-common-auth";
 
 class UrlService {
   getAll() {
-    return http.get("/link");
+    return httpAuth.get("/link");
   }
 
   get(id) {
