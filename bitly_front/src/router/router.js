@@ -15,6 +15,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: () => import("../views/Login")
+  },
+  {
+    path: "/profil",
+    name: "profil",
+    component: () => import("../views/Profil")
   }
 ]
 const router = createRouter({

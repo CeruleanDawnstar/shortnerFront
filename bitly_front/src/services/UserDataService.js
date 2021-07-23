@@ -1,6 +1,6 @@
 import http from "../http-common";
 
-class TutorialDataService {
+class AuthService {
   getAll() {
     return http.get("/users");
   }
@@ -9,12 +9,30 @@ class TutorialDataService {
     return http.get(`/users/${id}`);
   }
 
-  create(data) {
-    return http.post("/signUp", data);
+  register(user) {
+    return http.post("/signUp", {
+      pseudo: user.pseudo,
+      password: user.password
+    })
+    .then(response => {
+      if (response.data.token) {
+        localStorage.setItem('token', JSON.stringify(response.data.token));
+      }
+      return response.data;
+    });
   }
 
-  verify() {
-    return http.post("/login", data);
+  login(user) {
+    return http.post("/login", {
+      pseudo: user.pseudo,
+      password: user.password
+    })
+    .then(response => {
+      if (response.data.token) {
+        localStorage.setItem('token', JSON.stringify(response.data.token));
+      }
+      return response.data;
+    });
   }
 
   update(id, data) {
@@ -25,6 +43,9 @@ class TutorialDataService {
     return http.delete(`/users/${id}`);
   }
 
+  logout() {
+      localStorage.removeItem('token');
+  }
 }
 
-export default new TutorialDataService();
+export default new AuthService();
