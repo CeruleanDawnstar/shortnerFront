@@ -22,7 +22,7 @@
           <label><strong>longLink:</strong></label> {{ currentLink.longLink }}
         </div>
         <div>
-          <label><strong>ShortLink:</strong></label><a href= ""> {{ currentLink.shortLink }} </a>
+          <label><strong>ShortLink:</strong></label> <a :href ="currentLink.shortLink">  {{ currentLink.shortLink }} </a>
         </div>
 
         <a class="badge badge-warning"
@@ -49,7 +49,8 @@ export default {
       links: [],
       currentLink: null,
       currentIndex: -1,
-      longLink: ""
+      longLink: "",
+      
     };
   },
   methods: {
