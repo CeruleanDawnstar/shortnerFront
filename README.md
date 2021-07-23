@@ -3,7 +3,7 @@ Web app front-end using VueJS for the link shortner application.
 
 Link to the Shortner API >> [here](https://github.com/CeruleanDawnstar/shortnerBack) <<
 
-Lastest branch is Main
+Latest branch is Main
 
 # :white_check_mark:Prerequisites:white_check_mark:
 
