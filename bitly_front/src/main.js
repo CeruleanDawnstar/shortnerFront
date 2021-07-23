@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/router'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import store from "./store";
-import'bootstrap'
-import'bootstrap/dist/css/bootstrap.min.css'
-import { FontAwesomeIcon } from './assets/font-awesome'
+import { FontAwesomeIcon } from './assets/font-awesome';
 
 createApp(App)
     .use(router)

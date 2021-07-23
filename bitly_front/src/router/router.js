@@ -1,10 +1,21 @@
 import { createWebHistory, createRouter } from "vue-router";
 
-const routes = [
+const routes =  [
   {
     path: "/",
-    name: "accueil",
-    component: () => import("../views/Index")
+    alias: "/add",
+    name: "add",
+    component: () => import("../components/CreateShortLink")
+  },
+  {
+    path: "/link/:id",
+    name: "link-details",
+    component: () => import("../components/EdiitUrlLink")
+  },
+  {
+    path: "/links",
+    name: "links",
+    component: () => import("../components/ListAllUrl")
   },
   {
     path: "/signUp",
@@ -21,10 +32,11 @@ const routes = [
     name: "profil",
     component: () => import("../views/Profil")
   }
-]
+];
+
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 });
 
 export default router;
