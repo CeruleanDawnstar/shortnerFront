@@ -19,6 +19,12 @@
     <div>
         <p>short URL :<a :href="shortLink"> {{shortLink}}</a></p>
         <p>{{dateLink}}</p>
+                <div v-if="!submitted">
+          <p>QrCode</p>
+          </div>
+          <div v-else>
+            <vue-qrcode :value="shortLink" :options="{ width: 200 }" />
+        </div>
     </div>
     </div>
 
