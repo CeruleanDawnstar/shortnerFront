@@ -1,5 +1,6 @@
 # :link:shortnerFront:link:
-Web app front-end using VueJS for the link shortner application
+Web app front-end using VueJS for the link shortner application.
+
 Link to the Shortner API >> [here](https://github.com/CeruleanDawnstar/shortnerBack) <<
 
 # :white_check_mark:Prerequisites:white_check_mark:
