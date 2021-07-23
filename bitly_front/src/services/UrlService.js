@@ -20,10 +20,6 @@ class UrlService {
   delete(id) {
     return http.delete(`/users/${id}`);
   }
-
- /* findByQrCode(title) {
-    return http.get(`/link?qrCode=${qrCode}`);
-  }*/
 }
 
 export default new UrlService();
