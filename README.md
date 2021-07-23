@@ -1,5 +1,6 @@
 # :link:shortnerFront:link:
 Web app front-end using VueJS for the link shortner application
+Link to the Shortner API >> [here](https://github.com/CeruleanDawnstar/shortnerBack) <<
 
 # :white_check_mark:Prerequisites:white_check_mark:
 
@@ -24,14 +25,18 @@ And restart the server back up :
 
 > `docker-compose up --build`
 
-To test out the project, you can use applications like [Postman](https://www.postman.com/).
+You can use the navbar to navigate to the different options available like login, signup, listUrl or just put the following links to test them out :
+- http://localhost:8125/login to test the login
+- http://localhost:8125/signUp to test the signup
+- http://localhost:8125/links to list all the links stored in database
+- http://localhost:8125/link/1 to get the link whose ID is 1
 
 
 # :busts_in_silhouette:Contributors:busts_in_silhouette:
 Contributors of this project include :
-# [skillyHawk](https://github.com/skillyHawk)
-# [296341](https://github.com/296341)
-# [CeruleanDawnstar](https://github.com/CeruleanDawnstar)
+# [skillyHawk](https://github.com/skillyHawk) (Rémy)
+# [296341](https://github.com/296341) (Antoine)
+# [CeruleanDawnstar](https://github.com/CeruleanDawnstar) (Tahir)
 
 
 # :trident:How to contribute:trident:
